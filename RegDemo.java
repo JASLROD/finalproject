@@ -15,6 +15,8 @@ public class RegDemo
         dmv.setFileNames();
         size = dmv. getArraySize();
         CarOwner[]ltState = new CarOwner[size];
+        dmv.processTextToArray(ltState);
+        
 
     }
 

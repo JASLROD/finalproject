@@ -33,4 +33,33 @@ public class RegistrationMethods
         input.close();
         return counter;
     }
-}
+
+    public void setFileNames()
+    {
+        Scanner keyboard = new Scanner(System.in);
+        File file;
+        System.outprint("Provide the location of the registration.csv file: ");
+        inputFileName = keyboard.nextLine();
+        file = new File (input FileName);
+
+    }
+
+    /**
+     * 
+     *
+     */
+    public void processTextToArray(CarOwner[] inArray) throws IOException
+    {
+        File file = new File (inputFileName);
+        Scanner input = new Scanner(file);
+        input.nextLine();
+        int index = 0;
+
+        while (input.hasNextLine()){
+            String line = input.NextLine();
+            String[] tokens = line.split(",");
+            int month = Integer.parseInt(takens[3]);
+            CarOwner temp = newCarOwner(tokens[1], takens[0], tokens[2], month, Integer.parseInt(tokens[4]))
+            inArray[index] = temp;
+            index ++;
+        }
