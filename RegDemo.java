@@ -9,12 +9,13 @@ public class RegDemo
 {
     public static void main(String[] args)
     {
-       
+
         int size = 0;
         RegistrationMethods dmv = new RegistrationMethods();
-       dmv.setFileName();
-       size = dmv. getArraySize();
-       
+        dmv.setFileNames();
+        size = dmv. getArraySize();
+        CarOwner[]ltState = new CarOwner[size];
+
     }
 
     /**

@@ -12,23 +12,25 @@ public class RegistrationMethods
     public static final int REG_MONTH = 4;
     public static final int REG_YEAR = 2025;
 
-    /**;
-     * Constructor for objects of class RegistrationMethods
-     */
-    public RegistrationMethods()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
     /**
      * An example of a method - replace this comment with your own
      *
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int getArraySize()
+    public int getArraySize() throws IOException
     {
-        File file = new File(
+
+        int counter = 0;
+        File file = new File(inputFileName);
+        Scanner input = Scanner(file);
+        input.nextLine();
+        while(input.hasNextLine())
+        {
+            counter++;
+            input.nextLine();
+        }
+        input.close();
+        return counter;
     }
 }
