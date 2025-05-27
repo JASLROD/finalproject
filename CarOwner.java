@@ -42,7 +42,7 @@ public class CarOwner extends Citizen
     public CarOwner(String inFirst, String inLast, String inLicense, int inMonth, int inYear)
     {
         super(inFirst, inLast);
-        String license = inLicense;
+        license = inLicense;
         month = inMonth;
         year = inYear;
     }

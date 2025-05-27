@@ -49,7 +49,6 @@ public class RegistrationMethods
      */
     public int getArraySize() throws IOException
     {
-
         int counter = 0;
         File file = new File(inputFileName);
         Scanner input = new Scanner(file);
@@ -81,7 +80,7 @@ public class RegistrationMethods
             String[] tokens = line.split(",");
             int month = Integer.parseInt(tokens[3]);
             int year = Integer.parseInt(tokens[4]);
-            CarOwner temp = new CarOwner(tokens[1], tokens[0], tokens[2], month, Integer.parseInt(tokens[4]));
+            CarOwner temp = new CarOwner(tokens[1], tokens[0], tokens[2], month, year);
             inArray[index] = temp;
             index ++;
         }
@@ -90,19 +89,17 @@ public class RegistrationMethods
     }
 
     /**
-     * Writes a message followed by the contents of a CarOwner array to the output file.
-     * Appends the data rather than overwriting existing content.
+     *
      * 
-     * @param inArray the array of CarOwner objects to write
-     * @param inMsg a header or message to be printed before the array contents
-     * @throws IOException if the file cannot be written to
+     *  @param inArray the array to be filled with CarOwner objects
+     * @throws IOException if the file cannot be read
      */
-    public void processTextToArray(CarOwner[] inArray, String inMsg) throws IOException
+    public void printArrayToFile(CarOwner[] inArray, String inMsg) throws IOException
     {
-        FileWriter file = new FileWriter(outputFileName, true);
+        FileWriter file = new FileWriter(outputFileName,true);
         PrintWriter output = new PrintWriter(file);
         output.println(inMsg);
-        for(CarOwner item: inArray)
+        for(CarOwner item:inArray)
             output.println(item);
         output.println();
         output.close();
@@ -163,13 +160,14 @@ public class RegistrationMethods
         return almostDue;
     }
 
+
     /**
      * Returns the name of the output file set by the user.
      * 
      * @return the output file name
      */
     public String getOutputFileName()
-    {
+    { 
         return outputFileName;
     }
 }

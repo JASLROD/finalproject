@@ -25,8 +25,8 @@ public class Citizen
      */
     public Citizen(String inFirst, String inLast)
     {
-        String firstName = inFirst;
-        String lastName = inLast;
+        firstName = inFirst;
+        lastName = inLast;
     }
 
     /**

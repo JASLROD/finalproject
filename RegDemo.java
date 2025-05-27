@@ -8,9 +8,8 @@
  */
 public class RegDemo
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws Exception
     {
-
         int size = 0;
         RegistrationMethods dmv = new RegistrationMethods();
         dmv.setFileNames();
@@ -24,6 +23,5 @@ public class RegDemo
         dmv.printArrayToFile(almostDue, "Owners with registration expiring in three months or less");
         System.out.println("The output file is located at: " + dmv.getOutputFileName());
     }
-        
 
-    }
+}
