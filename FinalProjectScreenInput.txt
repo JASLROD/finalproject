@@ -1,0 +1,3 @@
+Enter the path to the registrations.csv file (ie c:/tmp/registration.csv): c:/tmp/registration.csv
+Enter the path where output.txt should be saved (ie c:/tmp/output.txt): c:/tmp/output.txt
+The output file can be found at: c:/tmp/output.txt

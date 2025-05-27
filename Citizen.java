@@ -2,21 +2,31 @@
 /**
  * Write a description of class Citizen here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jasmin Leonrodriguez, jleonrodriquez@student.sdccd.edu
+ * @version v1.0
+ * @since 5/22/2025
  */
 public class Citizen
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String firstName;
+    private String lastName;
 
     /**
      * Constructor for objects of class Citizen
      */
     public Citizen()
     {
-        // initialise instance variables
-        x = 0;
+        firstName = "No Name";
+        lastName = "No Name";
+    }
+
+    /**
+     * Constructor for objects of class Citizen
+     */
+    public Citizen(String inFirst, String inLast)
+    {
+        String firstName = inFirst;
+        String lastName = inLast;
     }
 
     /**
@@ -29,5 +39,37 @@ public class Citizen
     {
         String str = firstName + " " + lastName;
         return str;
+    }
+
+    /**
+     * Constructor for objects of class Citizen
+     */
+    public void setFirstName(String inFirst)
+    {
+        firstName = inFirst;
+    }
+
+    /**
+     * Constructor for objects of class Citizen
+     */
+    public String getFirstName()
+    {
+        return firstName;
+    }
+    
+    /**
+     * Constructor for objects of class Citizen
+     */
+    public void setLastName(String inLast)
+    {
+       lastName = inLast;
+    }
+    
+    /**
+     * Constructor for objects of class Citizen
+     */
+    public String getLastName()
+    {
+        return lastName;
     }
 }
