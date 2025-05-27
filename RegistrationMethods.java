@@ -89,10 +89,12 @@ public class RegistrationMethods
     }
 
     /**
+     * Writes the provided CarOwner array to the output file.
+     * Includes a header message and an extra newline after the records.
      *
-     * 
-     *  @param inArray the array to be filled with CarOwner objects
-     * @throws IOException if the file cannot be read
+     * @param inArray the array of CarOwner objects to write to the file
+     * @param inMsg a header message to be printed before the array contents
+     * @throws IOException if the output file cannot be written
      */
     public void printArrayToFile(CarOwner[] inArray, String inMsg) throws IOException
     {
@@ -159,7 +161,6 @@ public class RegistrationMethods
         }
         return almostDue;
     }
-
 
     /**
      * Returns the name of the output file set by the user.
